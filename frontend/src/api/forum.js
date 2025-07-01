@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/forums';
+const API_URL = process.env.REACT_APP_API_URL ? `${process.env.REACT_APP_API_URL}/forums` : 'http://localhost:5000/api/forums';
 
 export async function fetchForums() {
   const token = localStorage.getItem('token');
