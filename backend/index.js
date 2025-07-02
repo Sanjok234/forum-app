@@ -29,7 +29,7 @@ testConnection();
 //middlewares
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: process.env.ORIGIN || "http://localhost:3000",
   })
 );
 app.use(express.json());
